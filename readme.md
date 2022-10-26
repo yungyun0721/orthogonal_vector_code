@@ -3,7 +3,7 @@ This repository is the official implementation of the increased-size EnKF system
 ![model_illustration](figure/Figure1.jpg)
 
 ## Requirements
-Software requirements: Matlab 2017a
+Software requirement: Matlab 2017a
 
 To install libraries:
 1. go to the folder under the SPROUT
@@ -21,7 +21,7 @@ online imperfect model experiment
 ```mermaid
 graph LR;
 st[offline experiment]-->a1
-a1[main_offline_6ens adding one vecoter and control run]
+a1[main_offline_6ens<br>adding one vecoter and control run]
 a1-->b1(control run with 6 ensemble members)
 a1-->b2(random orthogonal vector)
 a1-->b3(IESV1)
@@ -30,20 +30,20 @@ a1-->b5(Ensemble mean vector)
 a1-->b6(Orthogonal ensemble mean vector)
 st[offline experiment]-->a2
 a2[main_offline_8_ens_IESV_ensmean]
-a2-->c1(8 member experiment adding ensemble mean vector and IESV1)
+a2-->c1(8 member experiment<br>adding ensemble mean vector and IESV1)
 ```
 5. the online experiment
 ```mermaid
 graph LR;
 st[online experiment]-->a1
-a1[main_online_6ens adding one vecoter and control run]
+a1[main_online_6ens<br>adding one vecoter and control run]
 a1-->b1(control run with 6 ensemble members)
 a1-->b2(random orthogonal vector)
 a1-->b3(Orthogonal IESV1)
 a1-->b4(Orthogonal ensemble mean vector)
 st[online experiment]-->a2
 a2[main_online_8_ens_IESV_ensmean]
-a2-->b5(8 member experiment adding ensemble mean vector and IESV1)
+a2-->b5(8 member experiment<br>adding ensemble mean vector and IESV1)
 st[online experiment]-->a3
 a3[main_7_ens]
 a3-->b6(EnKF with 7 ensmeble member)
@@ -54,13 +54,13 @@ a3-->b6(EnKF with 7 ensmeble member)
 ```mermaid
 graph LR;
 st[online imperfect model experiment]-->a1
-a1[main_online_6ens_imperfect_new adding one vecoter and control run]
+a1[main_online_6ens_imperfect_new<br>adding one vecoter and control run]
 a1-->b1(control run with 6 ensemble members)
 a1-->b2(Orthogonal IESV1)
 a1-->b3(Orthogonal ensemble mean vector)
 st[online imperfect model experiment]-->a2
 a2[main_online_8_ens_IESV_ensmean_imperfect]
-a2-->b4(8 member experiment adding ensemble mean vector and IESV1)
+a2-->b4(8 member experiment<br>adding ensemble mean vector and IESV1)
 st[online imperfect model experiment]-->a3
 a3[main_7_ens_imperfect]
 a3-->b5(EnKF with 7 ensmeble member)
