@@ -13,9 +13,9 @@ sprout.initializer
 2. back to the main code folder
 
 3. This repository offers 3 kinds of experiment: 
-offline experiment
-online  experiment
-online imperfect model experiment
+- offline experiment
+- online  experiment
+- online imperfect model experiment
 
 4. the offline experiments
 ```mermaid
@@ -74,10 +74,10 @@ a3-->b5(EnKF with 7 ensmeble member)
 All analysis needs to be started from the RMSE_count.m or RMSE_count_imperfect.m
 
 ### in figure folder
-figure2: projection_time_local_max.m
-figure3: projection_time_local_max.m + improvement_time_local_max
-figure4: cosIESV1_ensmean_leave_F_T.m
-figure5 and 6 :plot_svd_for_RMSE.m
+1. figure2: projection_time_local_max.m
+2. figure3: projection_time_local_max.m + improvement_time_local_max
+3. figure4: cosIESV1_ensmean_leave_F_T.m
+4. figure5 and 6 :plot_svd_for_RMSE.m
 
 ## the experiment data could be reproduced by the code
 
