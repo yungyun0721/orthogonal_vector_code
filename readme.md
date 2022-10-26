@@ -6,18 +6,20 @@ This repository is the official implementation of the increased-size EnKF system
 Software requirement: Matlab 2017a
 
 To install libraries:
-1. go to the folder under the SPROUT
+1. go to the SPROUT folder
 ```
 sprout.initializer
 ```
-2. back to the main code folder
+2. back to the main_code folder
 
-3. This repository offers 3 kinds of experiment: 
+## Run experiments
+
+1. This repository offers 3 kinds of experiment: 
 - offline experiment
 - online  experiment
 - online imperfect model experiment
 
-4. the offline experiments
+2. the offline experiments
 ```mermaid
 graph LR;
 st[offline experiment]-->a1
@@ -32,7 +34,7 @@ st[offline experiment]-->a2
 a2[main_offline_8_ens_IESV_ensmean]
 a2-->c1(8 member experiment<br>adding ensemble mean vector and IESV1)
 ```
-5. the online experiment
+3. the online experiment
 ```mermaid
 graph LR;
 st[online experiment]-->a1
@@ -50,7 +52,7 @@ a3-->b6(EnKF with 7 ensmeble member)
 
 ```
 
-6. the online imperfect model experiment
+4. the online imperfect model experiment
 ```mermaid
 graph LR;
 st[online imperfect model experiment]-->a1
