@@ -1,0 +1,86 @@
+# Using orthogonal vector to improve the ensemble space of the EnKF and its effect on data assimilation and forecasting
+This repository is the official implementation of the increased-size EnKF system by using the orthogonal vector to improve the EnKF performance under the lorenz 96 model.
+![model_illustration](figure/Figure1.jpg)
+
+## Requirements
+Software requirements: Matlab 2017a
+
+To install libraries:
+1. go to the folder under the SPROUT
+```
+sprout.initializer
+```
+2. back to the main code folder
+
+3. This repository offers 3 kinds of experiment: 
+offline experiment
+online  experiment
+online imperfect model experiment
+
+4. the offline experiments
+```mermaid
+graph LR;
+st[offline experiment]-->a1
+a1[main_offline_6ens adding one vecoter and control run]
+a1-->b1(control run with 6 ensemble members)
+a1-->b2(random orthogonal vector)
+a1-->b3(IESV1)
+a1-->b4(Orthogonal IESV1)
+a1-->b5(Ensemble mean vector)
+a1-->b6(Orthogonal ensemble mean vector)
+st[offline experiment]-->a2
+a2[main_offline_8_ens_IESV_ensmean]
+a2-->c1(8 member experiment adding ensemble mean vector and IESV1)
+```
+5. the online experiment
+```mermaid
+graph LR;
+st[online experiment]-->a1
+a1[main_online_6ens adding one vecoter and control run]
+a1-->b1(control run with 6 ensemble members)
+a1-->b2(random orthogonal vector)
+a1-->b3(Orthogonal IESV1)
+a1-->b4(Orthogonal ensemble mean vector)
+st[online experiment]-->a2
+a2[main_online_8_ens_IESV_ensmean]
+a2-->b5(8 member experiment adding ensemble mean vector and IESV1)
+st[online experiment]-->a3
+a3[main_7_ens]
+a3-->b6(EnKF with 7 ensmeble member)
+
+```
+
+6. the online imperfect model experiment
+```mermaid
+graph LR;
+st[online imperfect model experiment]-->a1
+a1[main_online_6ens_imperfect_new adding one vecoter and control run]
+a1-->b1(control run with 6 ensemble members)
+a1-->b2(Orthogonal IESV1)
+a1-->b3(Orthogonal ensemble mean vector)
+st[online imperfect model experiment]-->a2
+a2[main_online_8_ens_IESV_ensmean_imperfect]
+a2-->b4(8 member experiment adding ensemble mean vector and IESV1)
+st[online imperfect model experiment]-->a3
+a3[main_7_ens_imperfect]
+a3-->b5(EnKF with 7 ensmeble member)
+```
+### after finish the main.m 
+`da_run`  : control run
+`da2_run` : experiment
+
+
+# analysis
+All analysis needs to be started from the RMSE_count.m or RMSE_count_imperfect.m
+
+### in figure folder
+figure2: projection_time_local_max.m
+figure3: projection_time_local_max.m + improvement_time_local_max
+figure4: cosIESV1_ensmean_leave_F_T.m
+figure5 and 6 :plot_svd_for_RMSE.m
+
+## the experiment data could be reproduced by the code
+
+
+
+
