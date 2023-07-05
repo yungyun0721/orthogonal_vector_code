@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/557688796.svg)](https://zenodo.org/badge/latestdoi/557688796)
+
 # Using orthogonal vector to improve the ensemble space of the EnKF and its effect on data assimilation and forecasting
 This repository is the official implementation of the increased-size EnKF system by using the orthogonal vector to improve the EnKF performance under the lorenz 96 model.
 ![model_illustration](figure/Figure1.jpg)
